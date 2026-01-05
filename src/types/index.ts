@@ -8,6 +8,7 @@ export interface Project {
   liveUrl?: string;
   liveUr2?: string;
   featured: boolean;
+  warning?: string;
 }
 
 export interface Skill {

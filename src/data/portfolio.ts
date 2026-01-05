@@ -2,6 +2,9 @@ import { Project, Skill, SocialLink, Education } from "../types";
 import oneImage from "../assets/one.png";
 import twoImage from "../assets/two.png";
 import threeImage from "../assets/three.png";
+import fourImage from "../assets/four.png";
+import oip from "../assets/OIP.webp";
+import shopora from "../assets/shopora.png";
 
 export const projects: Project[] = [
   {
@@ -50,10 +53,10 @@ export const projects: Project[] = [
     id: "4",
     title: "AI-Powered-Phishing-Email-Detection",
     description:
-      "Analytics dashboard for social media metrics with data visualization and reporting features.",
+      "AI-powered phishing email detection system using machine learning and deep learning algorithms .",
     image:
       "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["Flusk", "Python", "Boostrap", "Mysql"],
+    technologies: ["Flask", "Python", "Bootstrap", "MySQL"],
     githubUrl:
       "https://github.com/Hiroshan01/AI-Powered-Phishing-Email-Detection-",
     // liveUrl: "https://example.com",
@@ -61,25 +64,43 @@ export const projects: Project[] = [
   },
   {
     id: "5",
-    title: "Portfolio CMS",
+    title: "Youtube Analytics System",
     description:
-      "Content management system for portfolio websites with drag-and-drop builder and template system.",
-    image:
-      "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["React", "Next.js", "Prisma", "PostgreSQL"],
-    githubUrl: "https://github.com",
+      "Youtube analytics system to track video performance, audience engagement, and channel growth metrics.",
+    image: fourImage,
+    technologies: ["ReactCorUI", "DRF(Django)", "Knox", "MySQL"],
+    githubUrl: "",
     featured: false,
+    warning: "Private Repository(POS)",
   },
   {
     id: "6",
-    title: "Fitness Tracker",
-    description:
-      "Mobile-responsive fitness tracking app with workout plans, progress tracking, and nutrition logging.",
-    image:
-      "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["React Native", "Expo", "Firebase", "TypeScript"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
+    title: "Malicious-URL-Detection",
+    description: "Malicious URL Detection  using machine learning algorithms.",
+    image: oip,
+    technologies: ["Python", "Colab", "Machine Learning"],
+    githubUrl: "https://github.com/Hiroshan01/Malicious-URL-Detection",
+
+    featured: false,
+  },
+  {
+    id: "7",
+    title: "DJANGO E-Commerce Web Application",
+    description: "Malicious URL Detection  using machine learning algorithms.",
+    image: shopora,
+    technologies: [
+      "Python",
+      "Django",
+      "HTML",
+      "Alpine.js",
+      "Tailwind",
+      "Poetry",
+      "Vanilla JS",
+      "Postgresql"
+    ],
+    githubUrl:
+      "https://github.com/Hiroshan01/SHOPORA-E-Commerce-Fullstack-Web-App-Django",
+    warning: "Development Stage",
     featured: false,
   },
 ];
@@ -143,6 +164,6 @@ export const education: Education[] = [
     startDate: "2023",
     description:
       "Completed a comprehensive web development course covering front-end and back-end technologies, including HTML, CSS, JavaScript, React, Node.js, and database management.",
-    grade: "3A passes",
+    grade: "Best",
   },
 ];
