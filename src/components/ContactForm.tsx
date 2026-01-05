@@ -1,6 +1,7 @@
 import { useState, FormEvent } from 'react';
 import { motion } from 'framer-motion';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import { ContactFormData } from '../types';
 
 export const ContactForm = () => {
@@ -48,20 +49,37 @@ export const ContactForm = () => {
     setSubmitStatus('idle');
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+  
+      const emailData = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      };
 
-      console.log('Form submitted:', formData);
+    
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        emailData,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
 
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
       setErrors({});
 
+    
       setTimeout(() => {
         setSubmitStatus('idle');
       }, 5000);
     } catch (error) {
       console.error('Error submitting form:', error);
       setSubmitStatus('error');
+      
+    
+      setTimeout(() => {
+        setSubmitStatus('idle');
+      }, 5000);
     } finally {
       setIsSubmitting(false);
     }
@@ -171,7 +189,7 @@ export const ContactForm = () => {
           className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg flex items-center gap-2 text-green-700 dark:text-green-400"
         >
           <CheckCircle size={20} />
-          <span>Message sent successfully!</span>
+          <span>Message sent successfully! I'll get back to you soon.</span>
         </motion.div>
       )}
 
@@ -182,7 +200,7 @@ export const ContactForm = () => {
           className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg flex items-center gap-2 text-red-700 dark:text-red-400"
         >
           <AlertCircle size={20} />
-          <span>Something went wrong. Please try again.</span>
+          <span>Failed to send message. Please try again or email me directly.</span>
         </motion.div>
       )}
 
