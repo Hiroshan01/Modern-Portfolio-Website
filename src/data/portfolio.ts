@@ -2,7 +2,7 @@ import { Project, Skill, SocialLink, Education } from "../types";
 import oneImage from "../assets/one.png";
 import twoImage from "../assets/two.png";
 import threeImage from "../assets/three.png";
-import fourImage from "../assets/four.png";
+
 import oip from "../assets/OIP.webp";
 import shopora from "../assets/shopora.png";
 
@@ -62,17 +62,17 @@ export const projects: Project[] = [
     // liveUrl: "https://example.com",
     featured: true,
   },
-  {
-    id: "5",
-    title: "Youtube Analytics System",
-    description:
-      "Youtube analytics system to track video performance, audience engagement, and channel growth metrics.",
-    image: fourImage,
-    technologies: ["ReactCorUI", "DRF(Django)", "Knox", "MySQL"],
-    githubUrl: "",
-    featured: false,
-    warning: "Private Repository(POS)",
-  },
+  // {
+  //   id: "5",
+  //   title: "Youtube Analytics System",
+  //   description:
+  //     "Youtube analytics system to track video performance, audience engagement, and channel growth metrics.",
+  //   image: fourImage,
+  //   technologies: ["ReactCorUI", "DRF(Django)", "Knox", "MySQL"],
+  //   githubUrl: "",
+  //   featured: false,
+  //   warning: "Private Repository(POS)",
+  // },
   {
     id: "6",
     title: "Malicious-URL-Detection",
@@ -96,7 +96,7 @@ export const projects: Project[] = [
       "Tailwind",
       "Poetry",
       "Vanilla JS",
-      "Postgresql"
+      "Postgresql",
     ],
     githubUrl:
       "https://github.com/Hiroshan01/SHOPORA-E-Commerce-Fullstack-Web-App-Django",
